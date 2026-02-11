@@ -7,26 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-
-    <p> Alice está editando...</p>
-    <h1>
-        Bem-vindo ao Banco central da Alice ❤
-    </h1>
-
-    {% if logado %}
-        <p>Olá, Saulo</p>
-
-    {% else %}
-        <a class="btn btn-primary" href="#">clique aqui para fazer o login</a>
-    {% endif %}
-
-    <p>Foram registradas {{ n_chaves }} chaves pix</p>
-
-    <p>Lista de países que já aceitam o Pix do Brasil:</p>
-    <ul class="list-group">
-    {% for pais in paises %}
-        <li class="list-group-item">{{ pais }}</li>
-    {% endfor %}
-    </ul>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pix_%28Brazil%29_logo.svg/3840px-Pix_%28Brazil%29_logo.svg.png " style="width: 50%; margin: auto;" >
+    <h1> Em breve, você terá uma nova forma de fazer pagamentos.</h1>
+    <p> Com o pix, srá possivel pagar e transferir todos os dias, a qualquer hora e para todos os bancos.</p>
+    <p></p>
 </body>
 </html>
