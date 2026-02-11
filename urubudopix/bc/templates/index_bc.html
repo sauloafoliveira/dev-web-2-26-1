@@ -7,26 +7,112 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <p> Luiza Andreza </p>
-    <h1>
-        
-        Bem-vindo ao Banco central da Luiza Andreza
-    </h1>
 
-    {% if logado %}
-        <p>Olá, Saulo</p>
+    <h2>Formulário de Cadastro</h2>
 
-    {% else %}
-        <a class="btn btn-primary" href="#">clique aqui para fazer o login</a>
-    {% endif %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #00bfa5, #00695c);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
 
-    <p>Foram registradas {{ n_chaves }} chaves pix</p>
+    .card {
+        background: white;
+        width: 350px;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        text-align: center;
+    }
 
-    <p>Lista de países que já aceitam o Pix do Brasil:</p>
-    <ul class="list-group">
-    {% for pais in paises %}
-        <li class="list-group-item">{{ pais }}</li>
-    {% endfor %}
-    </ul>
+    .pix-logo {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        margin: 10px 0;
+        color: #00695c;
+    }
+
+    input {
+        width: 90%;
+        padding: 8px;
+        margin: 6px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        width: 95%;
+        padding: 10px;
+        background-color: #00bfa5;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    button:hover {
+        background-color: #009e88;
+    }
+
+    .qr {
+        margin-top: 20px;
+    }
+
+    .valor {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .chave {
+        font-size: 13px;
+        background: #f2f2f2;
+        padding: 5px;
+        border-radius: 5px;
+        word-break: break-all;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+    <!-- Logo Pix -->
+    <img class="pix-logo" src="https://logospng.org/download/pix/logo-pix-icone-256.png" alt="Pix Logo">
+
+    <h2>Cadastro</h2>
+
+    <form>
+        <input type="text" placeholder="Nome completo" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Telefone" required>
+
+        <button type="submit">Finalizar Cadastro</button>
+    </form>
+
+    <div class="valor">Valor: R$ 50,00</div>
+
+    <div class="qr">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=email@exemplo.com" 
+        alt="QR Code Pix">
+    </div>
+
+    <p>Chave Pix:</p>
+    <div class="chave">email@exemplo.com</div>
+
+</div>
+
+
+
 </body>
 </html>
