@@ -8,24 +8,17 @@
 </head>
 <body>
 
-    <h1>
-        Bem-vindo ao Banco central da cristina!
-    </h1>
-<p>Cristina cat<p/>
-    {% if logado %}
-        <p>Olá, Saulo</p>
-
-    {% else %}
-        <a class="btn btn-primary" href="#">clique aqui para fazer o login</a>
-    {% endif %}
-
-    <p>Foram registradas {{ n_chaves }} chaves pix</p>
-
-    <p>Lista de países que já aceitam o Pix do Brasil:</p>
-    <ul class="list-group">
-    {% for pais in paises %}
-        <li class="list-group-item">{{ pais }}</li>
-    {% endfor %}
-    </ul>
+   <img src="data:image/png;base64,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"
+alt="pix">
+<h1> Em breve, você terá uma nova forma de pagamentos</h1>
+<p>Com o Pix, será possivel pagar e transferir todos os dias, a qualquer hora e para todos os bancos</p>
+<h2>Garanta agora seu pré cadastro e não fique fora dessa!</h2>
+<button style="border-radius: 50px;
+padding: 10px 25px;
+border: none;
+background-color: red;
+font-size: 16px;
+cursor: pointer;">
+Continuar</button>
 </body>
 </html>
